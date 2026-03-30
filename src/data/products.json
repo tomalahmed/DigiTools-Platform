@@ -1,0 +1,92 @@
+[
+  {
+    "id": "copygen-pro",
+    "name": "CopyGen Pro",
+    "description": "Generate conversion-focused copy for ads, landing pages, and emails.",
+    "price": 19,
+    "period": "month",
+    "tagType": "New",
+    "features": ["AI ad headlines", "Campaign templates", "Brand tone presets"],
+    "icon": "copywriter"
+  },
+  {
+    "id": "seo-radar",
+    "name": "SEO Radar",
+    "description": "Track rankings and discover SEO opportunities with actionable suggestions.",
+    "price": 29,
+    "period": "month",
+    "tagType": "Popular",
+    "features": ["Keyword tracker", "Competitor insights", "On-page checklist"],
+    "icon": "seo"
+  },
+  {
+    "id": "design-lab",
+    "name": "DesignLab",
+    "description": "Create polished visuals quickly with reusable social and branding templates.",
+    "price": 24,
+    "period": "month",
+    "tagType": "Best Seller",
+    "features": ["Template library", "Smart resize", "Brand kit support"],
+    "icon": "design"
+  },
+  {
+    "id": "mail-flow",
+    "name": "MailFlow",
+    "description": "Automate email journeys with behavior-driven rules and segment controls.",
+    "price": 22,
+    "period": "month",
+    "tagType": "Popular",
+    "features": ["Automation builder", "Audience segmentation", "A/B email testing"],
+    "icon": "email"
+  },
+  {
+    "id": "social-pulse",
+    "name": "SocialPulse",
+    "description": "Plan, schedule, and analyze social content performance from one dashboard.",
+    "price": 18,
+    "period": "month",
+    "tagType": "New",
+    "features": ["Publishing calendar", "Multi-channel posting", "Engagement analytics"],
+    "icon": "social"
+  },
+  {
+    "id": "video-spark",
+    "name": "VideoSpark",
+    "description": "Produce short promo videos with drag-drop scenes and caption automation.",
+    "price": 27,
+    "period": "month",
+    "tagType": "Best Seller",
+    "features": ["Scene presets", "Auto captions", "1080p exports"],
+    "icon": "video"
+  },
+  {
+    "id": "insight-hub",
+    "name": "InsightHub",
+    "description": "Build custom dashboards and monitor campaign KPIs in real time.",
+    "price": 31,
+    "period": "month",
+    "tagType": "Popular",
+    "features": ["Live dashboard widgets", "Custom report sharing", "Goal tracking"],
+    "icon": "analytics"
+  },
+  {
+    "id": "invoice-easy",
+    "name": "InvoiceEasy",
+    "description": "Create invoices, track payments, and automate reminders for clients.",
+    "price": 15,
+    "period": "month",
+    "tagType": "New",
+    "features": ["Invoice templates", "Payment status alerts", "Recurring billing"],
+    "icon": "billing"
+  },
+  {
+    "id": "support-desk",
+    "name": "SupportDesk",
+    "description": "Handle customer tickets with response macros and team performance metrics.",
+    "price": 20,
+    "period": "month",
+    "tagType": "Best Seller",
+    "features": ["Shared inbox", "SLA rules", "CSAT reporting"],
+    "icon": "support"
+  }
+]
