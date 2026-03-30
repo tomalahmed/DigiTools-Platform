@@ -1,6 +1,9 @@
 import Navbar from './components/layout/Navbar'
 import Banner from './components/layout/Banner'
 import Stats from './components/layout/Stats'
+import Steps from './components/layout/Steps'
+import Pricing from './components/layout/Pricing'
+import Footer from './components/layout/Footer'
 
 function App() {
   return (
@@ -8,6 +11,9 @@ function App() {
       <Navbar />
       <Banner />
       <Stats />
+      <Steps />
+      <Pricing />
+      <Footer />
     </div>
   )
 }
