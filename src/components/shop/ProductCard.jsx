@@ -1,16 +1,23 @@
-import { iconByName, UnknownIcon } from '../../assets/icons'
+import designToolLogo from '../../assets/products/design-tool.png'
+import operationLogo from '../../assets/products/operation.png'
+import portfolioLogo from '../../assets/products/portfolio.png'
+import shoppingCartLogo from '../../assets/products/shopping-cart.png'
+import socialMediaLogo from '../../assets/products/social-media.png'
+import writingLogo from '../../assets/products/writing_2327400 1.png'
+
+const productLogos = [designToolLogo, operationLogo, portfolioLogo, shoppingCartLogo, socialMediaLogo, writingLogo]
 
 const tagStyles = {
   new: {
-    className: 'badge badge-primary',
+    className: 'inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700',
     label: 'New',
   },
   popular: {
-    className: 'badge badge-secondary',
+    className: 'inline-flex rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold text-violet-700',
     label: 'Popular',
   },
   'best-seller': {
-    className: 'badge badge-accent',
+    className: 'inline-flex rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700',
     label: 'Best Seller',
   },
 }
@@ -19,17 +26,28 @@ function normalizeTagType(tagType) {
   return String(tagType).toLowerCase().replace(/\s+/g, '-')
 }
 
+function getProductLogo(id = '') {
+  const total = productLogos.length
+  const sum = String(id)
+    .split('')
+    .reduce((acc, char) => acc + char.charCodeAt(0), 0)
+  return productLogos[sum % total]
+}
+
 function ProductCard({ product, isInCart, onBuyNow }) {
-  const Icon = iconByName[product.icon] ?? UnknownIcon
+  const logoSrc = getProductLogo(product.id)
   const tagKey = normalizeTagType(product.tagType)
-  const tag = tagStyles[tagKey] ?? { className: 'badge badge-ghost', label: product.tagType }
+  const tag = tagStyles[tagKey] ?? {
+    className: 'inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700',
+    label: product.tagType,
+  }
 
   return (
-    <article className="card border border-slate-200 bg-white shadow-sm">
-      <div className="card-body p-6">
+    <article className="card h-full border border-slate-200 bg-white shadow-sm">
+      <div className="card-body flex h-full flex-col p-6">
         <div className="flex items-start gap-4">
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-50 text-violet-700">
-            <Icon className="h-7 w-7" />
+          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-violet-50">
+            <img src={logoSrc} alt={`${product.name} logo`} className="h-7 w-7 object-contain" />
           </div>
 
           <div className="min-w-0 flex-1">
@@ -60,7 +78,7 @@ function ProductCard({ product, isInCart, onBuyNow }) {
 
         <button
           type="button"
-          className="mt-5 w-full rounded-full bg-linear-to-r from-violet-600 to-fuchsia-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-60"
+          className="mt-auto w-full rounded-full bg-linear-to-r from-violet-600 to-fuchsia-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-60"
           onClick={() => onBuyNow(product)}
           disabled={isInCart}
         >

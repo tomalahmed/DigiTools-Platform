@@ -49,7 +49,7 @@ function Navbar({ cartCount = 0 }) {
           >
             <FontAwesomeIcon icon={faCartShopping} />
             {cartCount > 0 && (
-              <span className="badge badge-primary badge-sm absolute -right-2 -top-2">
+              <span className="absolute -right-2 -top-2 inline-flex min-h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-xs font-semibold text-white">
                 {cartCount}
               </span>
             )}
