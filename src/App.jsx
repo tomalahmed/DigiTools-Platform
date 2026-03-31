@@ -29,6 +29,27 @@ function App() {
     toast.success(`${product.name} added to cart`)
   }
 
+  const handleRemoveFromCart = (productId) => {
+    setCartItems((prev) => {
+      const productToRemove = prev.find((item) => item.id === productId)
+      if (!productToRemove) return prev
+
+      toast.warn(`${productToRemove.name} removed from cart`)
+      return prev.filter((item) => item.id !== productId)
+    })
+  }
+
+  const handleCheckout = () => {
+    if (cartItems.length === 0) {
+      toast.info('Your cart is already empty')
+      return
+    }
+
+    setCartItems([])
+    toast.success('Proceed to checkout completed. Cart cleared.')
+    setActiveView('products')
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar cartCount={cartCount} />
@@ -40,7 +61,8 @@ function App() {
         products={products}
         cartItems={cartItems}
         onAddToCart={handleAddToCart}
-        onSwitchToCart={() => setActiveView('cart')}
+        onRemoveFromCart={handleRemoveFromCart}
+        onCheckout={handleCheckout}
       />
       <Steps />
       <Pricing />

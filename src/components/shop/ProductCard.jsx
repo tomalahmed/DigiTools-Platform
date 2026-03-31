@@ -43,31 +43,31 @@ function ProductCard({ product, isInCart, onBuyNow }) {
   }
 
   return (
-    <article className="card h-full border border-slate-200 bg-white shadow-sm">
-      <div className="card-body flex h-full flex-col p-6">
-        <div className="flex items-start gap-4">
+    <article className="card h-full min-h-[450px] border border-slate-200 bg-white shadow-sm">
+      <div className="card-body flex h-full flex-col p-10">
+        <div className="flex items-start gap-4 mb-4">
           <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-violet-50">
             <img src={logoSrc} alt={`${product.name} logo`} className="h-7 w-7 object-contain" />
           </div>
 
           <div className="min-w-0 flex-1">
             <div className="flex items-start justify-between gap-3">
-              <h3 className="truncate text-base font-semibold text-slate-900">{product.name}</h3>
-              <span className={tag.className}>{tag.label}</span>
+              <h3 className="line-clamp-2 pr-1 text-base font-semibold leading-6 text-slate-900">{product.name}</h3>
+              <span className={`${tag.className} shrink-0 whitespace-nowrap`}>{tag.label}</span>
             </div>
 
-            <p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-600">{product.description}</p>
+            <p className="mt-2 min-h-[72px] line-clamp-3 text-sm leading-6 text-slate-600">{product.description}</p>
           </div>
         </div>
 
-        <div className="mt-4 flex items-end justify-between">
+        <div className="p-3 mt-auto flex items-end justify-between">
           <div>
-            <span className="text-3xl font-extrabold text-slate-900">${product.price}</span>
-            <span className="ml-1 text-sm font-medium text-slate-500">/{product.period}</span>
+            <span className="whitespace-nowrap text-3xl font-extrabold text-slate-900">${product.price}</span>
+            <span className="ml-1 whitespace-nowrap text-sm font-medium text-slate-500">/{product.period}</span>
           </div>
         </div>
 
-        <ul className="mt-4 space-y-2 text-sm text-slate-700">
+        <ul className="mt-2 mb-4 space-y-2 text-sm text-slate-700">
           {product.features.map((feature) => (
             <li key={feature} className="flex items-start gap-2">
               <span className="mt-0.5 text-emerald-500">✓</span>

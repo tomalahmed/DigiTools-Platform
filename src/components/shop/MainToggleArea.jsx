@@ -8,6 +8,8 @@ function MainToggleArea({
   products,
   cartItems,
   onAddToCart,
+  onRemoveFromCart,
+  onCheckout,
 }) {
   const cartCount = cartItems.length
   const cartIdSet = new Set(cartItems.map((p) => p.id))
@@ -46,7 +48,12 @@ function MainToggleArea({
               />
             </div>
           ) : (
-            <CartPanel cartItems={cartItems} onBackToProducts={() => onChangeView('products')} />
+            <CartPanel
+              cartItems={cartItems}
+              onBackToProducts={() => onChangeView('products')}
+              onRemoveFromCart={onRemoveFromCart}
+              onCheckout={onCheckout}
+            />
           )}
         </div>
       </div>

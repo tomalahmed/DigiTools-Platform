@@ -15,7 +15,7 @@ function getProductLogo(id = '') {
   return productLogos[sum % total]
 }
 
-function CartItem({ product }) {
+function CartItem({ product, onRemove }) {
   const logoSrc = getProductLogo(product.id)
 
   return (
@@ -30,8 +30,15 @@ function CartItem({ product }) {
         </div>
       </div>
 
-      <div className="shrink-0">
+      <div className="shrink-0 text-right">
         <p className="text-sm font-bold text-slate-900">${product.price}</p>
+        <button
+          type="button"
+          onClick={() => onRemove(product.id)}
+          className="mt-2 rounded-full border border-rose-200 px-3 py-1 text-xs font-semibold text-rose-600 transition hover:bg-rose-50"
+        >
+          Remove
+        </button>
       </div>
     </div>
   )

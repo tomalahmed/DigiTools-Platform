@@ -1,6 +1,6 @@
 import CartItem from './CartItem'
 
-function CartPanel({ cartItems, onBackToProducts }) {
+function CartPanel({ cartItems, onBackToProducts, onRemoveFromCart, onCheckout }) {
   const total = cartItems.reduce((sum, item) => sum + item.price, 0)
 
   return (
@@ -22,7 +22,7 @@ function CartPanel({ cartItems, onBackToProducts }) {
           <div className="space-y-3">
             <h3 className="text-xl font-bold text-slate-900">Your Cart</h3>
             {cartItems.map((product) => (
-              <CartItem key={product.id} product={product} />
+              <CartItem key={product.id} product={product} onRemove={onRemoveFromCart} />
             ))}
           </div>
 
@@ -38,6 +38,13 @@ function CartPanel({ cartItems, onBackToProducts }) {
                 <span className="font-extrabold text-slate-900">${total}</span>
               </div>
             </div>
+            <button
+              type="button"
+              onClick={onCheckout}
+              className="mt-5 w-full rounded-full bg-linear-to-r from-violet-600 to-fuchsia-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-105"
+            >
+              Proceed to Checkout
+            </button>
           </aside>
         </div>
       )}
