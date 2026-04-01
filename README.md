@@ -1,16 +1,33 @@
-# React + Vite
+# DigiTools Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React + Tailwind + DaisyUI single-page app for browsing digital products and managing a cart workflow.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React (Vite)
+- Tailwind CSS
+- DaisyUI
+- React-Toastify
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Figma-style landing sections: Navbar, Banner, Stats, Steps, Pricing, Footer
+- Product/Cart center toggle (default view: Products)
+- Product cards in responsive 1/2/3-column grid
+- Cart with item count in navbar, remove action, and total price
+- Proceed to Checkout flow that clears the cart
+- Toast alerts for add, remove, duplicate add, and checkout events
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Scripts
+
+- `npm run dev` - start development server
+- `npm run build` - create production build
+- `npm run preview` - preview production build
+- `npm run lint` - run ESLint
