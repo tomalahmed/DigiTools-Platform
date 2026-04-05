@@ -1,8 +1,9 @@
-import { useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 import products from './data/products.json'
+import { scrollToSection } from './utils/scrollToSection'
 
 import Navbar from './components/layout/Navbar'
 import Banner from './components/layout/Banner'
@@ -30,13 +31,11 @@ function App() {
   }
 
   const handleRemoveFromCart = (productId) => {
-    setCartItems((prev) => {
-      const productToRemove = prev.find((item) => item.id === productId)
-      if (!productToRemove) return prev
+    const productToRemove = cartItems.find((item) => item.id === productId)
+    if (!productToRemove) return
 
-      toast.warn(`${productToRemove.name} removed from cart`)
-      return prev.filter((item) => item.id !== productId)
-    })
+    setCartItems((prev) => prev.filter((item) => item.id !== productId))
+    toast.warn(`${productToRemove.name} removed from cart`)
   }
 
   const handleCheckout = () => {
@@ -50,10 +49,47 @@ function App() {
     setActiveView('products')
   }
 
+  const goToProducts = useCallback(() => {
+    setActiveView('products')
+    scrollToSection('products')
+  }, [])
+
+  const openCart = useCallback(() => {
+    setActiveView('cart')
+    scrollToSection('products')
+  }, [])
+
+  const handleWatchDemo = useCallback(() => {
+    toast.info('Demo video would open here in a full product.')
+  }, [])
+
+  const handleLogin = useCallback(() => {
+    toast.info('Login is not wired in this demo build.')
+  }, [])
+
+  const handleGetStarted = useCallback(() => {
+    goToProducts()
+    toast.success('Pick a tool below to add it to your cart.')
+  }, [goToProducts])
+
+  const handlePlanSelect = useCallback((planName, ctaLabel) => {
+    if (planName === 'Enterprise') {
+      toast.info('Contact sales: sales@digitools.example')
+      return
+    }
+    toast.success(`${ctaLabel} — ${planName} plan selected (demo).`)
+  }, [])
+
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar cartCount={cartCount} />
-      <Banner />
+    <div id="top" className="min-h-screen bg-white">
+      <Navbar
+        cartCount={cartCount}
+        onOpenCart={openCart}
+        onGoToProducts={goToProducts}
+        onLogin={handleLogin}
+        onGetStarted={handleGetStarted}
+      />
+      <Banner onExploreProducts={goToProducts} onWatchDemo={handleWatchDemo} />
       <Stats />
       <MainToggleArea
         activeView={activeView}
@@ -65,8 +101,8 @@ function App() {
         onCheckout={handleCheckout}
       />
       <Steps />
-      <Pricing />
-      <Footer />
+      <Pricing onSelectPlan={handlePlanSelect} />
+      <Footer onExploreProducts={goToProducts} onViewPricing={() => scrollToSection('pricing')} />
       <ToastContainer position="top-right" autoClose={2500} hideProgressBar />
     </div>
   )

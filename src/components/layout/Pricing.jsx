@@ -1,4 +1,4 @@
-function Pricing() {
+function Pricing({ onSelectPlan }) {
   const plans = [
     {
       name: 'Starter',
@@ -49,7 +49,7 @@ function Pricing() {
   ]
 
   return (
-    <section className="bg-white">
+    <section id="pricing" className="scroll-mt-24 bg-white">
       <div className="mx-auto w-full max-w-6xl px-4 pb-16 text-black sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">Simple, Transparent Pricing</h2>
@@ -96,6 +96,7 @@ function Pricing() {
               <div className="mt-auto w-full pt-7">
                 <button
                   type="button"
+                  onClick={() => onSelectPlan?.(plan.name, plan.cta)}
                   className={`w-full rounded-full px-4 py-2.5 text-sm font-semibold transition ${
                     plan.featured
                       ? 'bg-white text-violet-700 hover:bg-white/90'

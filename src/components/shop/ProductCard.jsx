@@ -43,9 +43,9 @@ function ProductCard({ product, isInCart, onBuyNow }) {
   }
 
   return (
-    <article className="card h-full min-h-[450px] border border-slate-200 bg-white shadow-sm">
-      <div className="card-body flex h-full flex-col p-10">
-        <div className="flex items-start gap-4 mb-4">
+    <article className="card h-full min-h-[430px] border border-slate-200 bg-white shadow-sm">
+      <div className="card-body flex h-full flex-col p-6 sm:p-8">
+        <div className="mb-4 flex items-start gap-4">
           <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-violet-50">
             <img src={logoSrc} alt={`${product.name} logo`} className="h-7 w-7 object-contain" />
           </div>
@@ -56,11 +56,11 @@ function ProductCard({ product, isInCart, onBuyNow }) {
               <span className={`${tag.className} shrink-0 whitespace-nowrap`}>{tag.label}</span>
             </div>
 
-            <p className="mt-2 min-h-[72px] line-clamp-3 text-sm leading-6 text-slate-600">{product.description}</p>
+            <p className="mt-2 min-h-[72px] text-sm leading-6 text-slate-600">{product.description}</p>
           </div>
         </div>
 
-        <div className="p-3 mt-auto flex items-end justify-between">
+        <div className="mt-auto flex items-end justify-between p-3">
           <div>
             <span className="whitespace-nowrap text-3xl font-extrabold text-slate-900">${product.price}</span>
             <span className="ml-1 whitespace-nowrap text-sm font-medium text-slate-500">/{product.period}</span>

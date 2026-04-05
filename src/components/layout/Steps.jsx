@@ -25,7 +25,7 @@ function Steps() {
   ]
 
   return (
-    <section className="bg-white">
+    <section id="features" className="scroll-mt-24 bg-white">
       <div className="mx-auto w-full max-w-6xl px-4 py-16 text-slate-900 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">Get Started in 3 Steps</h2>

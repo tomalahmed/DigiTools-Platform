@@ -1,6 +1,6 @@
 import heroImg from '../../assets/banner.png'
 
-function Banner() {
+function Banner({ onExploreProducts, onWatchDemo }) {
   return (
     <section className="bg-white">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 md:items-center lg:px-8 lg:py-16">
@@ -23,12 +23,14 @@ function Banner() {
           <div className="mt-7 flex flex-wrap gap-3">
             <button
               type="button"
+              onClick={onExploreProducts}
               className="rounded-full bg-linear-to-r from-violet-600 to-fuchsia-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-105"
             >
               Explore Products
             </button>
             <button
               type="button"
+              onClick={onWatchDemo}
               className="rounded-full border border-violet-300 px-5 py-2.5 text-sm font-semibold text-violet-700 transition hover:bg-violet-50"
             >
               Watch Demo

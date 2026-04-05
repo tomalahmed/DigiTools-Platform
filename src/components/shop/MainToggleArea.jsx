@@ -15,7 +15,7 @@ function MainToggleArea({
   const cartIdSet = new Set(cartItems.map((p) => p.id))
 
   return (
-    <section className="bg-white">
+    <section id="products" className="scroll-mt-24 bg-white">
       <div className="mx-auto w-full max-w-6xl px-4 pt-10 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-6">
           <div>
