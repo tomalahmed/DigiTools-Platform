@@ -13,7 +13,7 @@ const tagStyles = {
     label: 'New',
   },
   popular: {
-    className: 'inline-flex rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold text-violet-700',
+    className: 'inline-flex rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-orange-700',
     label: 'Popular',
   },
   'best-seller': {
@@ -46,7 +46,7 @@ function ProductCard({ product, isInCart, onBuyNow }) {
     <article className="card h-full min-h-[430px] border border-slate-200 bg-white shadow-sm">
       <div className="card-body flex h-full flex-col p-6 sm:p-8">
         <div className="mb-4 flex items-start gap-4">
-          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-violet-50">
+          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-orange-50">
             <img src={logoSrc} alt={`${product.name} logo`} className="h-7 w-7 object-contain" />
           </div>
 
@@ -78,7 +78,7 @@ function ProductCard({ product, isInCart, onBuyNow }) {
 
         <button
           type="button"
-          className="mt-auto w-full rounded-full bg-linear-to-r from-violet-600 to-fuchsia-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-60"
+          className="mt-auto w-full rounded-full bg-linear-to-r from-orange-600 to-amber-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-60"
           onClick={() => onBuyNow(product)}
           disabled={isInCart}
         >

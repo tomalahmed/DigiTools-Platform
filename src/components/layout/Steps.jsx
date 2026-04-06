@@ -40,10 +40,10 @@ function Steps() {
               key={step.id}
               className="relative rounded-xl bg-white p-6 text-center text-slate-900 shadow-sm"
             >
-              <span className="absolute right-4 top-4 inline-flex h-7 w-7 items-center justify-center rounded-full bg-violet-600 text-xs font-semibold text-white">
+              <span className="absolute right-4 top-4 inline-flex h-7 w-7 items-center justify-center rounded-full bg-orange-600 text-xs font-semibold text-white">
                 {step.id}
               </span>
-              <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-violet-100">
+              <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-orange-100">
                 <img src={step.icon} alt="" className="h-7 w-7 object-contain" />
               </div>
               <h3 className="mt-4 text-xl font-semibold">{step.title}</h3>

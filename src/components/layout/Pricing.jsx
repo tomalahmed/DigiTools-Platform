@@ -64,7 +64,7 @@ function Pricing({ onSelectPlan }) {
               key={plan.name}
               className={`flex h-full flex-col rounded-xl border shadow-sm ${
                 plan.featured
-                  ? 'relative border-violet-400 bg-linear-to-br from-violet-600 to-fuchsia-500 px-6 pb-6 pt-9 text-white'
+                  ? 'relative border-orange-400 bg-linear-to-br from-orange-600 to-amber-500 px-6 pb-6 pt-9 text-white'
                   : 'border-slate-200 bg-white p-6 text-slate-900'
               }`}
             >
@@ -99,8 +99,8 @@ function Pricing({ onSelectPlan }) {
                   onClick={() => onSelectPlan?.(plan.name, plan.cta)}
                   className={`w-full rounded-full px-4 py-2.5 text-sm font-semibold transition ${
                     plan.featured
-                      ? 'bg-white text-violet-700 hover:bg-white/90'
-                      : 'bg-linear-to-r from-violet-600 to-fuchsia-500 text-white hover:brightness-105'
+                      ? 'bg-white text-orange-700 hover:bg-white/90'
+                      : 'bg-linear-to-r from-orange-600 to-amber-500 text-white hover:brightness-105'
                   }`}
                 >
                   {plan.cta}

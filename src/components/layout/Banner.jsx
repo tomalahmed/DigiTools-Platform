@@ -5,9 +5,9 @@ function Banner({ onExploreProducts, onWatchDemo }) {
     <section className="bg-white">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 md:items-center lg:px-8 lg:py-16">
         <div>
-        <span className="inline-flex items-center gap-2 rounded-full border border-violet-100 bg-violet-50 px-4 py-2 text-sm font-medium text-violet-700">
-        <span className="relative inline-flex h-3 w-3 items-center justify-center rounded-full bg-violet-200">
-        <span className="h-1.5 w-1.5 rounded-full bg-violet-600" />
+        <span className="inline-flex items-center gap-2 rounded-full border border-orange-100 bg-orange-50 px-4 py-2 text-sm font-medium text-orange-700">
+        <span className="relative inline-flex h-3 w-3 items-center justify-center rounded-full bg-orange-200">
+        <span className="h-1.5 w-1.5 rounded-full bg-orange-600" />
         </span>
              New: AI-Powered Tools Available
         </span>
@@ -24,14 +24,14 @@ function Banner({ onExploreProducts, onWatchDemo }) {
             <button
               type="button"
               onClick={onExploreProducts}
-              className="rounded-full bg-linear-to-r from-violet-600 to-fuchsia-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-105"
+              className="rounded-full bg-linear-to-r from-orange-600 to-amber-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-105"
             >
               Explore Products
             </button>
             <button
               type="button"
               onClick={onWatchDemo}
-              className="rounded-full border border-violet-300 px-5 py-2.5 text-sm font-semibold text-violet-700 transition hover:bg-violet-50"
+              className="rounded-full border border-orange-300 px-5 py-2.5 text-sm font-semibold text-orange-700 transition hover:bg-orange-50"
             >
               Watch Demo
             </button>
