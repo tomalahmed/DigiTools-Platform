@@ -54,7 +54,7 @@ function Footer({ onExploreProducts, onViewPricing }) {
 
   return (
     <footer id="faq" className="scroll-mt-24 bg-slate-900 text-white">
-      <div className="bg-linear-to-r from-orange-600 via-amber-600 to-amber-500">
+      <div className="bg-brand-primary">
         <div className="mx-auto w-full max-w-6xl px-4 py-16 text-center sm:px-6 lg:px-8">
           <h3 className="text-4xl font-semibold sm:text-5xl">Ready To Transform Your Workflow?</h3>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-white/85 sm:text-base">
@@ -64,7 +64,7 @@ function Footer({ onExploreProducts, onViewPricing }) {
             <button
               type="button"
               onClick={onExploreProducts}
-              className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-orange-700 transition hover:bg-white/90"
+              className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-brand-500 transition hover:bg-white/90"
             >
               Explore Products
             </button>

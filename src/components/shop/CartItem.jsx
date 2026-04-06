@@ -21,7 +21,7 @@ function CartItem({ product, onRemove }) {
   return (
     <div className="flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white p-4">
       <div className="flex items-center gap-3 min-w-0">
-        <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-orange-50">
+        <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-brand-50">
           <img src={logoSrc} alt={`${product.name} logo`} className="h-6 w-6 object-contain" />
         </div>
         <div className="min-w-0">

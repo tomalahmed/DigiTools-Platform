@@ -25,7 +25,7 @@ function Steps() {
   ]
 
   return (
-    <section id="features" className="scroll-mt-24 bg-white">
+    <section id="features" className="scroll-mt-24 bg-brand-section">
       <div className="mx-auto w-full max-w-6xl px-4 py-16 text-slate-900 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">Get Started in 3 Steps</h2>
@@ -40,10 +40,10 @@ function Steps() {
               key={step.id}
               className="relative rounded-xl bg-white p-6 text-center text-slate-900 shadow-sm"
             >
-              <span className="absolute right-4 top-4 inline-flex h-7 w-7 items-center justify-center rounded-full bg-orange-600 text-xs font-semibold text-white">
+              <span className="absolute right-4 top-4 inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-primary text-xs font-semibold text-white">
                 {step.id}
               </span>
-              <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-orange-100">
+              <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-50">
                 <img src={step.icon} alt="" className="h-7 w-7 object-contain" />
               </div>
               <h3 className="mt-4 text-xl font-semibold">{step.title}</h3>

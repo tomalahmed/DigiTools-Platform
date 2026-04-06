@@ -6,8 +6,8 @@ function SectionToggle({ activeView, onChangeView, cartCount }) {
         onClick={() => onChangeView('products')}
         className={`rounded-full px-5 py-2.5 text-sm font-semibold transition ${
           activeView === 'products'
-            ? 'bg-linear-to-r from-orange-600 to-amber-500 text-white shadow-sm hover:brightness-105'
-            : 'border border-orange-200 bg-white text-orange-700 hover:bg-orange-50'
+            ? 'bg-brand-primary text-white shadow-sm hover:brightness-[1.03]'
+            : 'border border-brand-100 bg-white text-brand-600 hover:bg-brand-50/80'
         }`}
       >
         Products
@@ -17,8 +17,8 @@ function SectionToggle({ activeView, onChangeView, cartCount }) {
         onClick={() => onChangeView('cart')}
         className={`rounded-full px-5 py-2.5 text-sm font-semibold transition ${
           activeView === 'cart'
-            ? 'bg-linear-to-r from-orange-600 to-amber-500 text-white shadow-sm hover:brightness-105'
-            : 'border border-orange-200 bg-white text-orange-700 hover:bg-orange-50'
+            ? 'bg-brand-primary text-white shadow-sm hover:brightness-[1.03]'
+            : 'border border-brand-100 bg-white text-brand-600 hover:bg-brand-50/80'
         }`}
       >
         Cart{cartCount > 0 ? ` (${cartCount})` : ''}

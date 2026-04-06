@@ -81,7 +81,7 @@ function App() {
   }, [])
 
   return (
-    <div id="top" className="min-h-screen bg-white">
+    <div id="top" className="min-h-screen bg-brand-page">
       <Navbar
         cartCount={cartCount}
         onOpenCart={openCart}

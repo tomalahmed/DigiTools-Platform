@@ -1,1 +1,49 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand-50: #faf6f4;
+  --color-brand-100: #f2e6df;
+  --color-brand-200: #e2cdc0;
+  --color-brand-300: #cca894;
+  --color-brand-400: #d88355;
+  --color-brand-500: #c76b41;
+  --color-brand-600: #a55734;
+  --color-brand-700: #7a3f26;
+  --color-brand-800: #5a2e1c;
+  --background-image-brand-primary: linear-gradient(
+    132deg,
+    #a55734 0%,
+    #c76b41 48%,
+    #d88355 100%
+  );
+  --background-image-brand-heading: linear-gradient(
+    117deg,
+    #7a3f26 0%,
+    #c76b41 42%,
+    #d88355 100%
+  );
+  --background-image-brand-soft: linear-gradient(
+    150deg,
+    rgb(199 107 65 / 0.12) 0%,
+    #faf6f4 45%,
+    rgb(216 131 85 / 0.1) 100%
+  );
+
+  /* Layered brand gradients (hero + soft section + page wash) */
+  --background-image-brand-hero:
+    radial-gradient(ellipse 90% 65% at 50% -15%, rgb(199 107 65 / 0.14), transparent 55%),
+    linear-gradient(165deg, #faf6f4 0%, #ffffff 48%, #f0e4db 100%);
+  --background-image-brand-section: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    color-mix(in srgb, #c76b41 6%, #ffffff) 48%,
+    #ffffff 100%
+  );
+  --background-image-brand-page: linear-gradient(
+    180deg,
+    color-mix(in srgb, #c76b41 9%, #faf6f4) 0%,
+    #ffffff 30%,
+    #ffffff 70%,
+    color-mix(in srgb, #d88355 7%, #f5f0eb) 100%
+  );
+}

@@ -6,7 +6,7 @@ function Stats() {
   ]
 
   return (
-    <section id="testimonials" className="scroll-mt-24 bg-linear-to-r from-orange-600 via-amber-600 to-amber-500">
+    <section id="testimonials" className="scroll-mt-24 bg-brand-primary">
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 px-4 py-7 text-white sm:grid-cols-3 sm:px-6 lg:px-8">
         {stats.map((item, index) => (
           <div

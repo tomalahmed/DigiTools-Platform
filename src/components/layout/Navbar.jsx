@@ -3,7 +3,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 import { scrollToSection } from '../../utils/scrollToSection'
 
-const navLinkClass = 'transition hover:text-orange-600'
+const navLinkClass = 'transition hover:text-brand-500'
 
 function Navbar({
   cartCount = 0,
@@ -24,7 +24,7 @@ function Navbar({
         <a
           href="#top"
           onClick={(e) => handleNav(e, 'top')}
-          className="text-2xl font-extrabold tracking-tight text-transparent bg-linear-to-r from-orange-600 to-amber-500 bg-clip-text sm:text-3xl"
+          className="text-2xl font-extrabold tracking-tight text-transparent bg-brand-heading bg-clip-text sm:text-3xl"
         >
           DigiTools
         </a>
@@ -83,14 +83,14 @@ function Navbar({
           <button
             type="button"
             onClick={onLogin}
-            className="hidden rounded-full px-4 py-2 text-sm font-medium text-slate-700 transition hover:text-orange-600 sm:inline-flex"
+            className="hidden rounded-full px-4 py-2 text-sm font-medium text-slate-700 transition hover:text-brand-500 sm:inline-flex"
           >
             Login
           </button>
           <button
             type="button"
             onClick={onGetStarted}
-            className="rounded-full bg-linear-to-r from-orange-600 to-amber-500 px-3 py-2 text-xs font-semibold text-white shadow-sm transition hover:brightness-105 sm:px-4 sm:text-sm"
+            className="rounded-full bg-brand-primary px-3 py-2 text-xs font-semibold text-white shadow-sm transition hover:brightness-[1.03] sm:px-4 sm:text-sm"
           >
             Get Started
           </button>

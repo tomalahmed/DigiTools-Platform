@@ -2,19 +2,21 @@ import heroImg from '../../assets/banner.png'
 
 function Banner({ onExploreProducts, onWatchDemo }) {
   return (
-    <section className="bg-white">
+    <section className="relative overflow-hidden bg-brand-hero">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 md:items-center lg:px-8 lg:py-16">
         <div>
-        <span className="inline-flex items-center gap-2 rounded-full border border-orange-100 bg-orange-50 px-4 py-2 text-sm font-medium text-orange-700">
-        <span className="relative inline-flex h-3 w-3 items-center justify-center rounded-full bg-orange-200">
-        <span className="h-1.5 w-1.5 rounded-full bg-orange-600" />
+        <span className="inline-flex items-center gap-2 rounded-full border border-brand-200/70 bg-brand-soft px-4 py-2 text-sm font-medium text-brand-600">
+        <span className="relative inline-flex h-3 w-3 items-center justify-center rounded-full bg-brand-primary p-0.5">
+        <span className="h-1.5 w-1.5 rounded-full bg-white" />
         </span>
              New: AI-Powered Tools Available
         </span>
-          <h1 className="mt-5 text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl">
-            Supercharge Your
+          <h1 className="mt-5 text-4xl font-extrabold leading-tight sm:text-5xl">
+            <span className="bg-brand-heading bg-clip-text text-transparent">
+              Supercharge Your
+            </span>
             <br />
-            Digital Workflow
+            <span className="text-slate-900">Digital Workflow</span>
           </h1>
           <p className="mt-4 max-w-md text-sm leading-6 text-slate-600 sm:text-base">
             Access premium AI tools, design assets, templates, and productivity
@@ -24,14 +26,14 @@ function Banner({ onExploreProducts, onWatchDemo }) {
             <button
               type="button"
               onClick={onExploreProducts}
-              className="rounded-full bg-linear-to-r from-orange-600 to-amber-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-105"
+              className="rounded-full bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-[1.03]"
             >
               Explore Products
             </button>
             <button
               type="button"
               onClick={onWatchDemo}
-              className="rounded-full border border-orange-300 px-5 py-2.5 text-sm font-semibold text-orange-700 transition hover:bg-orange-50"
+              className="rounded-full border border-brand-200 px-5 py-2.5 text-sm font-semibold text-brand-600 transition hover:bg-brand-50/80"
             >
               Watch Demo
             </button>

@@ -12,7 +12,7 @@ function CartPanel({ cartItems, onBackToProducts, onRemoveFromCart, onCheckout }
           <button
             type="button"
             onClick={onBackToProducts}
-            className="mt-6 rounded-full bg-linear-to-r from-orange-600 to-amber-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-105"
+            className="mt-6 rounded-full bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-[1.03]"
           >
             Browse Products
           </button>
@@ -41,7 +41,7 @@ function CartPanel({ cartItems, onBackToProducts, onRemoveFromCart, onCheckout }
             <button
               type="button"
               onClick={onCheckout}
-              className="mt-5 w-full rounded-full bg-linear-to-r from-orange-600 to-amber-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-105"
+              className="mt-5 w-full rounded-full bg-brand-primary px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-[1.03]"
             >
               Proceed to Checkout
             </button>
